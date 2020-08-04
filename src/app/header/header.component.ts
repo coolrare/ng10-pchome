@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   sitename = 'Hello World';
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
   sitelogo = '/assets/images/logo.png';
+  counter = 12;
 
   constructor() { }
 
@@ -22,6 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   changeTitle(evt: MouseEvent): void {
+    this.counter++;
     console.log(evt);
     if (evt.ctrlKey) {
       this.sitename = 'The Will Will Web';
