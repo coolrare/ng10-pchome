@@ -11,7 +11,9 @@ export class AppComponent {
   data: any;
 
   constructor(private datasvc: DataService) {
-    this.data = datasvc.data;
+    this.datasvc.load().subscribe(result => {
+      this.data = result;
+    });
   }
 
   doSearch(str): void {
