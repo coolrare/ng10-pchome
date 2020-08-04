@@ -21,8 +21,11 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  changeTitle(): void {
-    this.sitename = 'The Will Will Web';
+  changeTitle(evt: MouseEvent): void {
+    console.log(evt);
+    if (evt.ctrlKey) {
+      this.sitename = 'The Will Will Web';
+    }
   }
 
 }
